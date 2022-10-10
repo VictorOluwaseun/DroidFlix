@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.kesofty.movie_list_domain.model.Movie" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:layout_marginStart="20dp"
+            android:elevation="1dp"
+            android:src="@drawable/placeholder_img" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginVertical="25dp"
+            android:background="@color/card_color"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="50dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_movie_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="@{movie.title}"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:text="@string/maniac_placeholder" />
+
+                <TextView
+                    android:id="@+id/sub_dir_movie_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/sub_placeholder"
+                    android:textColor="@color/unselected_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sub_time_movie_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/time_placeholder"
+                    android:textColor="@color/unselected_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sub_rate_movie_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/rate_placeholder"
+                    android:textColor="@color/rate_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

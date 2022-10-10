@@ -14,3 +14,12 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DroidFlix"
 include ':app'
+include ':core'
+include ':movie_list'
+include ':movie_details'
+include ':movie_details:movie_details_presentation'
+include ':movie_details:movie_details_domain'
+include ':movie_details:movie_details_data'
+include ':movie_list:movie_list_presentation'
+include ':movie_list:movie_list_domain'
+include ':movie_list:movie_list_data'

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_error_message">Something went wrong</string>
+    <string name="check_connectivity_message">No internet</string>
+    <string name="can_not_connect_to_sever_message">Cannot connect to server</string>
+</resources>

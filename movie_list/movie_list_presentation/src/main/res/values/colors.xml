@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#18172e</color>
+    <color name="unselected_color">#5c6071</color>
+    <color name="card_color">#1c1b3d</color>
+    <color name="subtitle_color">#1c1b3d</color>
+    <color name="rate_color">#e5ca4d</color>
+</resources>

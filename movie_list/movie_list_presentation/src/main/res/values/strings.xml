@@ -1,0 +1,8 @@
+<resources>
+    <string name="now">Now</string>
+    <string name="recently">Recently</string>
+    <string name="maniac_placeholder">Maniac</string>
+    <string name="sub_placeholder">Director: Carefoy</string>
+    <string name="time_placeholder">Time: 156min</string>
+    <string name="rate_placeholder">9.1 ....</string>
+</resources>
