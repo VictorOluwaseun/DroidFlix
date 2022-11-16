@@ -14,6 +14,9 @@ dependencies {
     "implementation"(AndroidX.navigation)
     "implementation"(AndroidX.navigationFragment)
 
+    "implementation"(Glide.glide)
+    "kapt"(Glide.glideAnnotationProcessor)
+
 //    "implementation"("androidx.legacy:legacy-support-v4:1.0.0")
 //    "implementation"("androidx.recyclerview:recyclerview:1.2.1")
 }

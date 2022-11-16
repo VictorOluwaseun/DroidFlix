@@ -15,6 +15,9 @@ dependencies {
     "implementation"(Retrofit.okHttpLoggingInterceptor)
     "implementation"(Retrofit.gsonConverter)
 
+    "implementation"(Glide.glide)
+    "kapt"(Glide.glideAnnotationProcessor)
+
     "kapt"(Room.roomCompiler)
     "implementation"(Room.roomKtx)
     "implementation"(Room.roomRuntime)

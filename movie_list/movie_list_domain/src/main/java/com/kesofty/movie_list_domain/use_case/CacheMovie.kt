@@ -8,6 +8,6 @@ class CacheMovie(
 ) {
 
     suspend operator fun invoke(movie: Movie){
-        repository.insertMovie(movie)
+//        repository.insertMovieList(movie)
     }
 }

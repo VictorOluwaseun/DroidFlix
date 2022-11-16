@@ -1,6 +1,7 @@
 package com.kesofty.movie_list_data.di
 
 import com.kesofty.core.di.IoDispatcher
+import com.kesofty.core.local.MovieDao
 import com.kesofty.movie_list_data.remote.MovieListApi
 import com.kesofty.movie_list_data.repository.MovieRepositoryImpl
 import com.kesofty.movie_list_domain.repository.MovieRepository
@@ -14,7 +15,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object Module {
+object MovieListModule {
 
     @Provides
     @Singleton
@@ -26,8 +27,9 @@ object Module {
     @Singleton
     fun provideMovieRepository(
         api: MovieListApi,
+        dao: MovieDao,
         @IoDispatcher ioDispatcher: CoroutineDispatcher
     ): MovieRepository {
-        return MovieRepositoryImpl(api, ioDispatcher)
+        return MovieRepositoryImpl(api, dao, ioDispatcher)
     }
 }

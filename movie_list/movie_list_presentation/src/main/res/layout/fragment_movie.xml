@@ -8,6 +8,10 @@
         <variable
             name="viewModel"
             type="com.kesofty.movie_list_presentation.movie.ui.MovieViewModel" />
+
+        <variable
+            name="movieListener"
+            type="com.kesofty.movie_list_presentation.movie.ui.adapters.MovieListener" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -77,13 +77,16 @@ dependencies {
     kapt(Room.roomCompiler)
     implementation(Room.roomKtx)
     implementation(Room.roomRuntime)
-    implementation(Paging.paging)
+
+    implementation(Facebook.shimmer)
+
+    implementation(Glide.glide)
+    kapt(Glide.glideAnnotationProcessor)
 
     testImplementation(Testing.junit4)
     testImplementation(Testing.junitAndroidExt)
     testImplementation(Testing.truth)
     testImplementation(Testing.coroutines)
-    testImplementation(Testing.pagingTesting)
     testImplementation(Testing.turbine)
     testImplementation(Testing.mockk)
     testImplementation(Testing.mockWebServer)

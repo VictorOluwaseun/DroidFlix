@@ -3,6 +3,7 @@ package com.kesofty.movie_list_presentation.movie.ui
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.kesofty.core.util.Result
 import com.kesofty.movie_list_domain.model.Movie
 import com.kesofty.movie_list_domain.use_case.MovieUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -19,11 +20,22 @@ class MovieViewModel @Inject constructor(
         Log.i("MovieViewModel", "===>ViewModel started for MovieViewModel===>")
     }
 
-    //    private val _movieList = MutableStateFlow<List<Movie>?>(null)
-    val movieList: StateFlow<List<Movie>?> = flow {
+//        private val _movieList = MutableStateFlow<Result<List<Movie>>>(Result.Success(emptyList()))
+
+
+//    fun getMoveList() {
+//        viewModelScope.launch {
+//            val movieL = movieUseCases.getMovieList() //.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), initialValue = null)
+//            _movieList.emitAll(movieL)
+//        }
+//    }
+
+//    val movieL = movieUseCases.getMovieList().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), initialValue = null)
+
+    val movieList: StateFlow<Result<List<Movie>>> = flow {
         val movieL = movieUseCases.getMovieList()
-        emit(movieL.getOrNull())
-    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), initialValue = emptyList())
+        emitAll(movieL)
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), initialValue = Result.Success(emptyList()))
 
     val lowF = flow {
         emit("1")

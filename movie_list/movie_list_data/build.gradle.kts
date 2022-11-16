@@ -14,6 +14,4 @@ dependencies {
     "kapt"(Room.roomCompiler)
     "implementation"(Room.roomKtx)
     "implementation"(Room.roomRuntime)
-
-    "implementation"(Paging.paging)
 }
